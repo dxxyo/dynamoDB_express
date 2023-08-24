@@ -2,14 +2,14 @@ const express = require('express');
 const AWS = require('aws-sdk');
 const app = express();
 
-const client = new AWS.DynamoDB.DocumentClient();
-const tableName = 'iniDataBase';
-
 AWS.config.update({
     accessKeyId: 'ASIA6GGICQZMY4RW44UF',
     secretAccessKey: '7/pHH8gRdLWlG1vbbL35iwk3H5DE6Swnq6EnUFbO',
     region: 'us-east-1' // e.g., 'us-east-1'
   });
+
+const client = new AWS.DynamoDB.DocumentClient();
+const tableName = 'iniDataBase';
 
 
 // port on which the server listens
